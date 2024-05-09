@@ -1,0 +1,43 @@
+name: release.yml
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Shorten Commit SHA
+        id: shorten_sha
+        run: echo "::set-output name=short_sha::${GITHUB_SHA:0:7}"
+        
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 'latest'
+          cache: 'npm'
+        run: npm install && npm run build
+
+      - name: Package
+        run: tar -czvf release.tar.gz -C dist .
+        
+      - name: Publish Release
+        id: publish_release
+        uses: softprops/action-gh-release@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          files: |
+            release.tar.gz
+          tag_name: ${{ steps.shorten_sha.outputs.short_sha }}
+          release_name: Release ${{ steps.shorten_sha.outputs.short_sha }}
+          body: |
+            Release for commit ${{ steps.shorten_sha.outputs.short_sha }}
+    
