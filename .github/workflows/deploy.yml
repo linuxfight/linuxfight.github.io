@@ -25,4 +25,5 @@ jobs:
           script: |
             wget ${{ steps.get-release.outputs.DOWNLOAD_URL }} &&
             rm -rf /var/www/* &&
-            tar -zxvf release.tar.gz -C /var/www
+            tar -zxvf release.tar.gz -C /var/www &&
+            rm ./release.tar.gz
