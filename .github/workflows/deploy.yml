@@ -15,8 +15,7 @@ jobs:
         env:
           GITHUB_REPO: ${{ github.repository }}
           RELEASE_TAG: $(curl -s https://api.github.com/repos/$GITHUB_REPO/releases | jq --raw-output '.[].tag_name')
-          DOWNLOAD_URL: https://github.com/$GITHUB_REPO/releases/download/$RELEASE_TAG/release.tar.gz
-        run: echo $DOWNLOAD_URL && echo "DOWNLOAD_URL=$DOWNLOAD_URL" >> "$GITHUB_OUTPUT"
+        run: echo "DOWNLOAD_URL=https://github.com/$GITHUB_REPO/releases/download/$RELEASE_TAG/release.tar.gz" && echo "DOWNLOAD_URL=https://github.com/$GITHUB_REPO/releases/download/$RELEASE_TAG/release.tar.gz" >> "$GITHUB_OUTPUT"
       - name: Download and extract latest release on server
         uses: appleboy/ssh-action@v1.0.3
         with:
