@@ -5,9 +5,11 @@ import Hello from "./components/Hello.vue";
 </script>
 
 <template>
-  <Hello/>
-  <Bio/>
-  <Socials/>
+  <div id="app">
+      <Hello/>
+      <Bio/>
+      <Socials/>
+  </div>
 </template>
 
 <style scoped>
