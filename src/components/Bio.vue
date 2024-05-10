@@ -6,11 +6,11 @@
   <h1> Who am I? </h1>
   
   <p>
-    I'm a junior ASP.Net + BackEnd developer with skills in Entity Framework (as my main ORM).
+    I'm a junior C# developer (ASP.Net, Entity Framework, Telegram.Bot).
   </p>
   
   <p>
-    I have skills using Docker, Linux, GitHub Actions, Rust (teloxide) and Python (aiogram, tortoise orm).
+    I have skills in Docker, Linux, GitHub Actions, Rust (teloxide) and Python (nextcord, aiogram, tortoise orm).
   </p>
 </template>
 
