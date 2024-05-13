@@ -17,7 +17,7 @@ jobs:
 
       - name: Shorten Commit SHA
         id: shorten_sha
-        run: echo "::set-output name=short_sha::${GITHUB_SHA:0:7}"
+        run: echo "SHORT_SHA=${ GITHUB_SHA:0:7 }" >> "$GITHUB_OUTPUT"
         
       - name: Setup bun
         uses: oven-sh/setup-bun@v1
@@ -60,8 +60,7 @@ jobs:
         with:
           files: |
             release.tar.gz
-          tag_name: ${{ steps.shorten_sha.outputs.short_sha }}
-          release_name: Release ${{ steps.shorten_sha.outputs.short_sha }}
+          tag_name: ${{ steps.shorten_sha.outputs.SHORT_SHA }}
           body: |
-            Release for commit ${{ steps.shorten_sha.outputs.short_sha }}
+            Release for commit ${{ steps.shorten_sha.outputs.SHORT_SHA }}
     
