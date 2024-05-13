@@ -19,17 +19,39 @@ jobs:
         id: shorten_sha
         run: echo "::set-output name=short_sha::${GITHUB_SHA:0:7}"
         
-      - uses: actions/setup-node@v4
+      - name: Setup bun
+        uses: oven-sh/setup-bun@v1
         with:
-          node-version: 'latest'
-          cache: 'npm'
+          bun-version: latest
           
-      - name: Build
-        run: npm install && npm run build
+      - name: Build deps
+        run: bun run build
 
       - name: Create an archive
         run: tar -czvf release.tar.gz -C dist .
-        
+          
+      - name: Copy new version to server
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          port: ${{ secrets.PORT }}
+          source: "release.tar.gz"
+          target: /home/files/
+          
+      - name: Delete old version, unpack new
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          port: ${{ secrets.PORT }}
+          script: |
+            rm -rf /var/www/* &&
+            tar -zxvf release.tar.gz -C /var/www &&
+            rm ./release.tar.gz
+      
       - name: Publish Release
         id: publish_release
         uses: softprops/action-gh-release@v2
