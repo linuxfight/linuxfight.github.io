@@ -7,9 +7,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      packages: write
     
     steps:
       - name: Checkout Repository
@@ -51,13 +48,4 @@ jobs:
       - name: Publish Release
         id: publish_release
         uses: softprops/action-gh-release@v2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          files: |
-            release.tar.gz
-          tag_name: release_${GITHUB_SHA:0:7}
-          name: Release for ${GITHUB_SHA:0:7}
-          body: |
-            Release for commit ${GITHUB_SHA:0:7}
     
