@@ -48,9 +48,6 @@ jobs:
             tar -zxvf release.tar.gz -C /var/www &&
             rm ./release.tar.gz
       
-      - name: TEST
-        run: echo "${GITHUB_SHA:0:7}"
-      
       - name: Publish Release
         id: publish_release
         uses: softprops/action-gh-release@v2
@@ -59,7 +56,7 @@ jobs:
         with:
           files: |
             release.tar.gz
-          tag_name: ${GITHUB_SHA:0:7}
+          tag_name: release_${GITHUB_SHA:0:7}
           name: Release for ${GITHUB_SHA:0:7}
           body: |
             Release for commit ${GITHUB_SHA:0:7}
