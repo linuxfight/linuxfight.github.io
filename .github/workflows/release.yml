@@ -61,6 +61,7 @@ jobs:
           files: |
             release.tar.gz
           tag_name: ${{ steps.shorten_sha.outputs.SHORT_SHA }}
+          name: Release for ${{ steps.shorten_sha.outputs.SHORT_SHA }}
           body: |
             Release for commit ${{ steps.shorten_sha.outputs.SHORT_SHA }}
     
