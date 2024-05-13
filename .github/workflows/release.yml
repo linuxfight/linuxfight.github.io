@@ -24,8 +24,8 @@ jobs:
         with:
           bun-version: latest
           
-      - name: Build deps
-        run: bun run build
+      - name: Build and install deps
+        run: bun install && bun run build
 
       - name: Create an archive
         run: tar -czvf release.tar.gz -C dist .
