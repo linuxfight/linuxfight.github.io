@@ -2,11 +2,12 @@
 
 To build run:
 ```shell
-npm install
-npm run build
+bun install
+bun run build # or run dev
 ```
 
 Stack:
+ - Bun
  - VueJS
  - TypeScript
  - Vite
