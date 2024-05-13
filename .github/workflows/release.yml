@@ -5,7 +5,7 @@ on:
       - master
 
 jobs:
-  build:
+  release:
     runs-on: ubuntu-latest
     
     steps:
@@ -19,9 +19,15 @@ jobs:
           
       - name: Build and install deps
         run: bun install && bun run build
-
-      - name: Create an archive
-        run: tar -czvf release.tar.gz -C dist .
+          
+      - name: Delete old version
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          port: ${{ secrets.PORT }}
+          script: rm -rf /var/www/*
           
       - name: Copy new version to server
         uses: appleboy/scp-action@v0.1.7
@@ -30,22 +36,6 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
-          source: "release.tar.gz"
-          target: /home/files/
-          
-      - name: Delete old version, unpack new
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.KEY }}
-          port: ${{ secrets.PORT }}
-          script: |
-            rm -rf /var/www/* &&
-            tar -zxvf release.tar.gz -C /var/www &&
-            rm ./release.tar.gz
-      
-      - name: Publish Release
-        id: publish_release
-        uses: softprops/action-gh-release@v2
+          source: "dist/*"
+          target: /var/www/
     
