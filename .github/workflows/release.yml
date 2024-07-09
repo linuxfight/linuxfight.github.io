@@ -7,19 +7,19 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-        
+
       - name: Setup bun
         uses: oven-sh/setup-bun@v1
         with:
           bun-version: latest
-          
+
       - name: Build and install deps
         run: bun install && bun run build
-          
+
       - name: Delete old version
         uses: appleboy/ssh-action@v1.0.3
         with:
@@ -27,8 +27,8 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
-          script: rm -rf /var/www/*
-          
+          script: rm -rf /var/www/linuxfight.me/* || true
+
       - name: Copy new version to server
         uses: appleboy/scp-action@v0.1.7
         with:
@@ -37,5 +37,4 @@ jobs:
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
           source: "dist/*"
-          target: /var/www/
-    
+          target: /var/www/linuxfight.me/

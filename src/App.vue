@@ -6,14 +6,12 @@ import Projects from "./components/Projects.vue";
 </script>
 
 <template>
-  <div id="app">
-    <Hello/>
-    <Bio/>
-    <Suspense>
-      <Projects/>
-    </Suspense>
-    <Socials/>
-  </div>
+  <Hello/>
+  <Bio/>
+  <Suspense>
+    <Projects/>
+  </Suspense>
+  <Socials/>
 </template>
 
 <style scoped>
