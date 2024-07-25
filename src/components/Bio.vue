@@ -8,8 +8,9 @@
 
     <p>
       I'm a junior dev. Tried applying to VK Internship program.
-      Took part in <a href="https://prodcontest.ru">Prod contest</a>.
-      Now - creating backend for Middle Mobile app.
+      Participated in <a href="https://prodcontest.ru"> Prod contest 2024 </a>.
+      I've also participated in <a href="https://cs.hse.ru/se/2024/"> Summer School on Software Engineering at HSE </a>.
+      Now I'm working on backend for Middle Mobile app.
     </p>
 
     <h1> 💻 Stack </h1>
