@@ -7,15 +7,15 @@
     
     <div class="list">
       <a href="https://github.com/linuxfight/WoL_bot">
-        - Wake-on-Line telegram bot.
+        - Wake-on-Line telegram bot
       </a>
       
       <a href="https://github.com/linuxfight/TestTinkoffBot">
-        - Telegram bot for testing Tinkoff kassa link generation.
+        - Telegram bot for testing Tinkoff kassa link generation
       </a>
       
       <a href="https://github.com/linuxfight/metro_launcher">
-        - Minecraft launcher for Metro modpack.
+        - Minecraft launcher for Metro modpack
       </a>
       
       <a href="https://github.com/bookswapper">
