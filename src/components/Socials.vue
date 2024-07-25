@@ -9,10 +9,10 @@
     </div>
     <div class="socials">
       <a href="https://github.com/linuxfight" target="_blank">
-        <img src="../assets/github.svg" class="logo" alt="My github"/>
+        <img src="../assets/icons/github.svg" class="logo" alt="My github"/>
       </a>
       <a href="https://t.me/linuxfight" target="_blank">
-        <img src="../assets/telegram.svg" class="logo" alt="My telegram"/>
+        <img src="../assets/icons/telegram.svg" class="logo" alt="My telegram"/>
       </a>
     </div>
   </div>
