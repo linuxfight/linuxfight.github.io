@@ -31,7 +31,4 @@ import ProjectLink from "./ProjectLink.vue";
 </template>
 
 <style scoped>
-p {
-  margin-top: 25px;
-}
 </style>
