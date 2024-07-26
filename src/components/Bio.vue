@@ -7,7 +7,7 @@
     <h1> 🤔 Who am I? </h1>
 
     <div class="text-container">
-      <p>I'm a junior dev. Tried applying to VK Internship program.</p>
+      <p>I'm a junior backend dev. Tried applying to <a href="https://education.vk.company/centrum/internship">VK Internship</a>.</p>
       <p>Finalist in <a href="https://prodcontest.ru">Prod contest 2024</a>.</p>
       <p>I also took part in <a href="https://cs.hse.ru/se/2024/">Summer School of Software Engineering at HSE</a>.</p>
       <p>Now I'm working on backend for Middle Mobile app.</p>
