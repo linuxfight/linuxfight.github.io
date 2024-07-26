@@ -6,24 +6,21 @@
   <div class="card">
     <h1> 🤔 Who am I? </h1>
 
-    <p>
-      I'm a junior dev. Tried applying to VK Internship program.
-      Participated in <a href="https://prodcontest.ru">Prod contest 2024</a>.
-      I also took part in <a href="https://cs.hse.ru/se/2024/">Summer School on Software Engineering at HSE</a>.
-      Now I'm working on backend for Middle Mobile app.
-    </p>
+    <div class="text-container">
+      <p>I'm a junior dev. Tried applying to VK Internship program.</p>
+      <p>Finalist in <a href="https://prodcontest.ru">Prod contest 2024</a>.</p>
+      <p>I also took part in <a href="https://cs.hse.ru/se/2024/">Summer School of Software Engineering at HSE</a>.</p>
+      <p>Now I'm working on backend for Middle Mobile app.</p>
+    </div>
 
-    <h1> 💻 Stack </h1>
-    <div class="list">
+    <h1> 💻 My Stack </h1>
+    <div class="text-container">
       <p> - C# (ASP.NET, Entity Framework, Telegram.Bot, TDLib) </p>
       <p> - Go (Fiber, Gorm, Gotd) </p>
       <p> - Rust (Teloxide) </p>
       <p> - TypeScript (simple openapi clients) </p>
       <p> - VueJS (Router, Pinia, Vuetify) </p>
-    </div>
-    
-    <h1> 📱 Also using </h1>
-    <div class="list">
+      <br>
       <p> - Linux (Arch, Fedora, Debian/Ubuntu) </p>
       <p> - Docker </p>
       <p> - GitHub actions </p>

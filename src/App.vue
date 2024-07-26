@@ -12,4 +12,5 @@ import Projects from "./components/Projects.vue";
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+</style>
