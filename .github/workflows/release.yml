@@ -2,11 +2,23 @@ name: release.yml
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
-  release:
+  build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+      
+    concurrency:
+      group: 'pages'
+      cancel-in-progress: true
+      
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Checkout Repository
@@ -19,22 +31,13 @@ jobs:
 
       - name: Build and install deps
         run: bun install && bun run build
-
-      - name: Delete old version
-        uses: appleboy/ssh-action@v1.0.3
+        
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.KEY }}
-          port: ${{ secrets.PORT }}
-          script: rm -rf /var/www/linuxfight.me/* || true
-
-      - name: Copy new version to server
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.KEY }}
-          port: ${{ secrets.PORT }}
-          source: "dist/*"
-          target: /var/www/linuxfight.me/
+          path: './dist'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

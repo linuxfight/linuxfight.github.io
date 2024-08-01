@@ -1,13 +1,7 @@
-# My personal website!
+# My website!
 
-To build run:
+## Running:
 ```shell
 bun install
-bun run build # or run dev
+bun run dev
 ```
-
-Stack:
- - Bun
- - VueJS
- - TypeScript
- - Vite
