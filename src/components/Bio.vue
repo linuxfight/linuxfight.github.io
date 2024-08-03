@@ -18,6 +18,7 @@
       <p> - C# (ASP.NET, Entity Framework, Telegram.Bot, TDLib) </p>
       <p> - Go (Fiber, Gorm, Gotd) </p>
       <p> - Rust (Teloxide) </p>
+      <p> - Python (poetry, aiogram, https/aiohttp, tortoise orm, yt-dlp) </p>
       <p> - TypeScript (simple openapi clients) </p>
       <p> - VueJS (Router, Pinia, Vuetify) </p>
       <br>
