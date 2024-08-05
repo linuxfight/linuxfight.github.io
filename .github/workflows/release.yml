@@ -37,7 +37,7 @@ jobs:
             bun.lockb
             ~/.bun/install/cache
             node_modules
-            build
+            dist
           key: ${{ runner.os }}-packages
 
       - name: Setup bun
@@ -55,7 +55,7 @@ jobs:
              bun.lockb
              ~/.bun/install/cache
              node_modules
-             build
+             dist
            key: ${{ steps.restore.outputs.cache-primary-key }}
         
       - name: Setup Pages
