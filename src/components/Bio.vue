@@ -23,7 +23,7 @@
       <p> - TypeScript (simple openapi clients) </p>
       <p> - VueJS (Router, Pinia, Vuetify) </p>
       <br>
-      <p> - Linux (Arch, Fedora, Debian/Ubuntu) </p>
+      <p> - Linux (Arch, Fedora, Debian/Ubuntu) + Caddy/Traefik </p>
       <p> - Docker </p>
       <p> - GitHub actions </p>
     </div>
