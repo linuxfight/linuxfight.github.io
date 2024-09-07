@@ -10,6 +10,10 @@ import ProjectLink from "./ProjectLink.vue";
       <ProjectLink 
           text="Wake-on-Lan telegram bot"
           url="https://github.com/linuxfight/WoL_bot"/>
+
+      <ProjectLink
+          text="Discord bot for playing music"
+          url="https://github.com/linuxfight/DiscordMusicBot"/>
       
       <ProjectLink 
           text="Telegram bot for testing Tinkoff kassa payment link generation"
