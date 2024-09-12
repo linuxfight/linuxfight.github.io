@@ -5,7 +5,7 @@ import Projects from "./components/Projects.vue";
 </script>
 
 <template>
-  <div id="app" class="main">
+  <div class="main">
     <Bio/>
     <Projects/>
     <Socials/>
