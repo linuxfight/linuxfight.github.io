@@ -6,17 +6,17 @@ import ProjectLink from "./ProjectLink.vue";
   <div class="card">
     <h1> 📚 My Projects </h1>
     
-    <div class="text-container">
+    <div class="container text-container">
       <ProjectLink 
-          text="Wake-on-Lan telegram bot"
+          text="Telegram WoL bot"
           url="https://github.com/linuxfight/WoL_bot"/>
 
       <ProjectLink
-          text="Discord bot for playing music"
+          text="Discord music bot"
           url="https://github.com/linuxfight/DiscordMusicBot"/>
       
       <ProjectLink 
-          text="Telegram bot for testing Tinkoff kassa payment link generation"
+          text="Telegram bot for TBank Kassa"
           url="https://github.com/linuxfight/TestTinkoffBot"/>
       
       <ProjectLink 
@@ -27,9 +27,9 @@ import ProjectLink from "./ProjectLink.vue";
           text="A web application for the exchange of paper books"
           url="https://github.com/bookswapper"/>
 
-      <p>
-        There could be more projects, but some of them are private and I can't share them.
-      </p>
+      <ProjectLink
+          text="Telegram bot for searching movies"
+          url="https://github.com/linuxfight/MovieSearchBot"/>
     </div>
   </div>
 </template>

@@ -5,28 +5,21 @@
 <template>
   <div class="card">
     <div>
-      <h1> 📢 My accounts </h1>
+      <h1> 📢 My socials </h1>
     </div>
-    <div class="socials">
+    <div class="container socials-container">
       <a href="https://github.com/linuxfight" target="_blank">
-        <img src="../assets/icons/github.svg" class="logo" alt="My github"/>
+        <img src="../assets/icons/github.svg" class="logo" alt="My GitHub"/>
       </a>
       <a href="https://t.me/linuxfight" target="_blank">
-        <img src="../assets/icons/telegram.svg" class="logo" alt="My telegram"/>
+        <img src="../assets/icons/telegram.svg" class="logo" alt="My Telegram"/>
+      </a>
+      <a href="https://discord.com/users/linuxfight" target="_blank">
+        <img src="../assets/icons/discord-mark-blue.svg" class="logo" alt="My Discord"/>
       </a>
     </div>
   </div>
 </template>
 
 <style scoped>
-
-.logo {
-  height: 5em;
-  padding: 1em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
 </style>
