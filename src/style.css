@@ -19,33 +19,41 @@
 
 .main {
     /* From https://css.glass */
-    background: rgba(255, 255, 255, 0.09);
-    border-radius: 24px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgb(240, 240, 240, 0.01);
     filter: drop-shadow(0 0 10em rgba(126, 209, 155, 0.4));
-
-    margin: 5% 25% 5% 25%;
-    padding: 2rem;
-    min-width: 100%;
+    border-radius: 24px;
+    padding: 24px;
+    margin: 24px;
+    border: 1px solid rgba(126, 209, 155, 0.4);
 }
 
 @media (max-width: 768px) {
     .main {
         margin: 0;
         border-radius: 0;
+        padding: 5px;
         border: 0;
         filter: none;
+        border: none;
     }
 }
 
 .container {
     display: block;
     text-align: left;
-    background: rgb(41, 41, 41);
+    background: rgb(32, 32, 32);
     padding: 25px;
     border-radius: 24px;
     backdrop-filter: blur(5px);
+    border: 1px solid rgba(126, 209, 155, 0.4);
     -webkit-backdrop-filter: blur(5px);
+}
+
+@media (max-width: 768px) {
+    .container {
+        border: none;
+        padding: 13px;
+    }
 }
 
 .text-container {
@@ -81,15 +89,9 @@ a:hover {
 }
 
 body {
-    background-image: radial-gradient(#4e4a4a 1px, transparent 0),
-        radial-gradient(#4e4a4a 1px, transparent 0);
-    background-position: 0 0, 25px 25px;
-    background-size: 50px 50px;
-    margin: 0;
     display: flex;
-    place-items: center;
-    min-width: 320px;
-    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
 }
 
 @media (max-width: 768px) {
@@ -100,8 +102,14 @@ body {
 
 h1 {
     left: 15px;
-    font-size: 3.2em;
+    font-size: 2.8em;
     line-height: 1.1;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.3em;
+    }
 }
 
 p {
@@ -112,12 +120,25 @@ p {
     margin-bottom: 5px;
 }
 
+@media (max-width: 768px) {
+    p {
+        font-size: 0.85em;
+    }
+}
+
 .logo {
     width: 50px;
     padding: 1em;
     will-change: filter;
     transition: filter 300ms;
 }
+
+@media (max-width: 768px) {
+    .logo {
+        width: 35px;
+    }
+}
+
 .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
+    filter: drop-shadow(0 0 2em rgba(126, 209, 155, 0.3));
 }
