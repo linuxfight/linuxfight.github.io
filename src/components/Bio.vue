@@ -8,9 +8,9 @@
 
     <div class="container text-container">
       <p>I'm a 16 y.o. high school student and junior backend developer. </p>
-      <p>Finalist in <a href="https://prodcontest.ru">Prod contest 2024</a>.</p>
+      <p>Finalist in <a href="https://prodcontest.ru">PROD 2024</a>.</p>
       <p>Contestant in <a href="https://cs.hse.ru/se/2024/">Summer School of Software Engineering at HSE 2024</a>.</p>
-      <p>Worked on backend for <a href="https://t.me/middle_app">Middle</a> and <a href="https://t.me/TonOldy_bot">Oldy</a> mini app.</p>
+      <p>Worked on backend for <a href="https://t.me/middle_app">Middle</a> and <a href="https://t.me/TonOldy_bot">Oldy</a>.</p>
     </div>
 
     <h1> 💻 My Stack </h1>
