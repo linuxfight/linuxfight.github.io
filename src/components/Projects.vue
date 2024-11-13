@@ -20,20 +20,16 @@ import ProjectLink from "./ProjectLink.vue";
           url="https://github.com/linuxfight/webTemplate"/>
       
       <ProjectLink 
-          text="Telegram bot for TBank Kassa"
-          url="https://github.com/linuxfight/TestTinkoffBot"/>
-      
-      <ProjectLink 
-          text="Minecraft launcher for Metro modpack"
-          url="https://github.com/linuxfight/metro_launcher"/>
-      
-      <ProjectLink 
           text="A web application for the exchange of paper books"
           url="https://github.com/bookswapper"/>
 
       <ProjectLink
           text="Telegram bot for searching movies"
           url="https://github.com/linuxfight/MovieSearchBot"/>
+
+      <ProjectLink
+          text="Telegram Mini App for splitting and managing expenses"
+          url="https://github.com/SplitOnly"/>
     </div>
   </div>
 </template>
