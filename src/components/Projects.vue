@@ -24,10 +24,6 @@ import ProjectLink from "./ProjectLink.vue";
           url="https://github.com/bookswapper"/>
 
       <ProjectLink
-          text="Telegram bot for searching movies"
-          url="https://github.com/linuxfight/MovieSearchBot"/>
-
-      <ProjectLink
           text="Telegram Mini App for splitting and managing expenses"
           url="https://github.com/SplitOnly"/>
     </div>
