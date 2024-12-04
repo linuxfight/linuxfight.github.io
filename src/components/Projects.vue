@@ -12,10 +12,6 @@ import ProjectLink from "./ProjectLink.vue";
           url="https://github.com/linuxfight/WoL_bot"/>
 
       <ProjectLink
-          text="Discord music bot"
-          url="https://github.com/linuxfight/DiscordMusicBot"/>
-
-      <ProjectLink
           text="Go Web App template"
           url="https://github.com/linuxfight/webTemplate"/>
       
