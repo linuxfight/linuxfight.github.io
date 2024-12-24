@@ -9,7 +9,7 @@ import ProjectLink from "./ProjectLink.vue";
     <div class="container text-container">
       <ProjectLink 
           text="Telegram WoL bot"
-          url="https://github.com/linuxfight/WoL_bot"/>
+          url="https://github.com/linuxfight/wol-e"/>
 
       <ProjectLink
           text="Go Web App template"
